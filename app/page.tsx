@@ -166,18 +166,40 @@ const lanes = [
 ];
 
 const dashboardStats = [
-  { label: "Index treasury", value: "$690,420", detail: "+18.7% draft cycle" },
-  { label: "Holder wallets", value: "6,900", detail: "snapshot-ready" },
-  { label: "Airdrop assets", value: "14", detail: "coins in rotation" },
-  { label: "Meme sleeve", value: "25%", detail: "high-beta belt" },
+  { label: "50% meme rail", value: "Coded", detail: "attention buys the belt" },
+  { label: "50% index rail", value: "RWA", detail: "assets route to holders" },
+  { label: "Next epoch", value: "06:90", detail: "snapshot loop preview" },
+  { label: "Receipts", value: "Live", detail: "everything stays on-screen" },
 ];
 
 const dashboardFeed = [
-  { asset: "RMI6900", route: "Core weight", amount: "22.0%", status: "Active" },
-  { asset: "ONDO", route: "RWA route", amount: "8.0%", status: "Queued" },
-  { asset: "WIF", route: "Meme belt", amount: "3.0%", status: "Live" },
-  { asset: "BONK", route: "Meme belt", amount: "3.0%", status: "Live" },
-  { asset: "LINK", route: "RWA oracle", amount: "7.0%", status: "Queued" },
+  { asset: "RMI6900", route: "Index core", amount: "22.0%", status: "Coded" },
+  { asset: "ONDO", route: "RWA rail", amount: "8.0%", status: "Queued" },
+  { asset: "WIF", route: "Meme rail", amount: "3.0%", status: "Live" },
+  { asset: "BONK", route: "Meme rail", amount: "3.0%", status: "Live" },
+  { asset: "LINK", route: "Oracle rail", amount: "7.0%", status: "Receipt" },
+];
+
+const engineCards = [
+  ["Signal Scan", "The AI-style index watches meme flow, holder density, and RWA rails before each cycle."],
+  ["Split Rails", "The loop stays readable: one rail feeds meme-index energy, one rail keeps hard assets moving."],
+  ["Route Basket", "RMI buys the basket we are in instead of hiding the index behind vague treasury language."],
+  ["Airdrop Holders", "Holder exposure is meant to land wallet-native, epoch by epoch, with claimless energy."],
+  ["Receipts", "The dashboard keeps the cycle visible so the meme machine feels coded, not hand-waved."],
+];
+
+const receiptRows = [
+  { time: "00:06:90", wallet: "RMI...6900", asset: "WIF", amount: "3.0%", tx: "Queued" },
+  { time: "00:05:12", wallet: "HOOD...MEME", asset: "ONDO", amount: "8.0%", tx: "Routed" },
+  { time: "00:04:44", wallet: "AI...RAIL", asset: "LINK", amount: "7.0%", tx: "Receipt" },
+  { time: "00:03:33", wallet: "BEL...IEVE", asset: "RMI", amount: "22.0%", tx: "Core" },
+];
+
+const terminalLines = [
+  "RMI engine awake...",
+  "Scanning meme rail...",
+  "Balancing RWA sleeve...",
+  "Writing holder receipts...",
 ];
 
 const memeCoins = [
@@ -246,9 +268,9 @@ const faqs = [
 
 const navLinks = [
   { label: "Dashboard", href: "#dashboard" },
+  { label: "Engine", href: "#engine" },
   { label: "Basket", href: "#basket" },
   { label: "Memes", href: "#memes" },
-  { label: "Airdrops", href: "#airdrops" },
 ];
 
 const statStyle = (accent: string): CSSProperties =>
@@ -293,8 +315,8 @@ export default function Home() {
             <div className="manifesto-line">Stop indexing. Believe in memes.</div>
             <p className="hero-lede">
               Robinhood Meme Index 6900 is the custom holder airdrop index for
-              coins we are in, real-world asset plays, Solana flow, and
-              high-conviction meme beta.
+              coins we are in, real-world asset plays, Solana flow, AI-index
+              signal, and high-conviction meme beta.
             </p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button button-dark" href="#airdrops">
@@ -321,8 +343,8 @@ export default function Home() {
             <div className="terminal-content">
               <div className="terminal-total">
                 <span>Projected index pool</span>
-                <strong>$690,420</strong>
-                <em>neon dashboard preview</em>
+                <strong>RMI/AI</strong>
+                <em>black-screen index engine</em>
               </div>
 
               <div className="terminal-metrics">
@@ -412,9 +434,9 @@ export default function Home() {
               <h2>Index-style dashboard for the RMI6900 machine.</h2>
             </div>
             <p>
-              A holder-facing control room that makes the index feel live:
-              treasury preview, airdrop flow, basket weights, and the meme belt
-              all in one scan.
+              A holder-facing control room that brings back the AI6900 index
+              feel: rails, epochs, receipts, basket weights, and meme flow in
+              one scan.
             </p>
           </div>
 
@@ -475,6 +497,75 @@ export default function Home() {
                 ))}
               </aside>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section flush-top engine-section" id="engine">
+        <div className="layout-rail">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">/ AI INDEX ENGINE /</div>
+              <h2>Like AI6900, but pointed at the meme index.</h2>
+            </div>
+            <p>
+              The old loop made the mechanics obvious: rail, epoch, reward,
+              receipt. RMI keeps that same black-screen clarity and routes it
+              through a Robinhood meme basket.
+            </p>
+          </div>
+
+          <div className="engine-grid">
+            {engineCards.map(([title, copy]) => (
+              <article className="engine-card" key={title}>
+                <small>{title}</small>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section flush-top receipts-section">
+        <div className="layout-rail">
+          <div className="receipts-layout">
+            <article className="terminal-panel">
+              <div className="terminal-head">
+                <span>Live activity</span>
+                <b>RMI: coded</b>
+              </div>
+              <div className="terminal-feed">
+                {terminalLines.map((line, index) => (
+                  <div className={index === 1 ? "is-active" : ""} key={line}>
+                    <span>{`00:0${index + 3}:90`}</span>
+                    <strong>{line}</strong>
+                  </div>
+                ))}
+              </div>
+            </article>
+
+            <article className="receipt-table">
+              <div className="terminal-head">
+                <span>Launch receipts</span>
+                <b>Epoch 01</b>
+              </div>
+              <div className="receipt-row receipt-head">
+                <span>Time</span>
+                <span>Wallet</span>
+                <span>Asset</span>
+                <span>Amount</span>
+                <span>Tx</span>
+              </div>
+              {receiptRows.map((row) => (
+                <div className="receipt-row" key={`${row.time}-${row.asset}`}>
+                  <span>{row.time}</span>
+                  <span>{row.wallet}</span>
+                  <span>{row.asset}</span>
+                  <span>{row.amount}</span>
+                  <span>{row.tx}</span>
+                </div>
+              ))}
+            </article>
           </div>
         </div>
       </section>

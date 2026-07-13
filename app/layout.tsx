@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const siteTitle = "RMI6900 | Robinhood Meme Index 6900";
 const siteDescription =
-  "A neon Robinhood Meme Index-style holder airdrop index for RMI6900, conviction coins, RWA assets, and meme-belt crypto exposure.";
+  "A black-screen AI6900-inspired Robinhood Meme Index for RMI6900: meme rails, RWA rails, holder airdrops, and live receipts.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: siteTitle,
       description:
-        "Hold RMI6900 and follow a neon custom Robinhood Meme Index with a dashboard, RWA sleeve, and meme conveyor.",
+        "Hold RMI6900 and follow a neon AI-index dashboard with meme rails, RWA rails, live receipts, and a conveyor belt.",
       images: [
         {
           url: "/og.png",
@@ -51,7 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: siteTitle,
       description:
-        "A holder airdrop index for coins we are in, RWA rails, and a meme conveyor belt.",
+        "A holder airdrop index with AI6900-style rails, RWA exposure, and a meme conveyor belt.",
       images: ["/og.png"],
     },
     icons: {

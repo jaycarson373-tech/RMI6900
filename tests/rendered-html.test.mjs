@@ -35,6 +35,10 @@ test("server-renders the RMI6900 index site", async () => {
   assert.match(html, /RMI6900/);
   assert.match(html, /Robinhood Meme Index 6900/);
   assert.match(html, /Stop indexing\. Believe in memes\./);
+  assert.match(html, /AI INDEX ENGINE/);
+  assert.match(html, /Like AI6900, but pointed at the meme index/);
+  assert.match(html, /Launch receipts/);
+  assert.match(html, /RMI engine awake/);
   assert.match(html, /Holder airdrops/);
   assert.match(html, /Coins we are in, plus RWA/);
   assert.match(html, /Index-style dashboard/);
@@ -61,5 +65,7 @@ test("removes disposable starter dependencies and imports", async () => {
   assert.match(css, /basket-table/);
   assert.match(css, /dashboard-shell/);
   assert.match(css, /conveyor-track/);
+  assert.match(css, /engine-grid/);
+  assert.match(css, /terminal-panel/);
   assert.match(css, /#e8ff17/);
 });

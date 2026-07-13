@@ -18,8 +18,8 @@ type AirdropStep = {
 
 const basket: BasketCoin[] = [
   {
-    symbol: "RHI6900",
-    name: "Robin Hood Index",
+    symbol: "RMI6900",
+    name: "Robinhood Meme Index 6900",
     lane: "Core",
     allocation: "22%",
     thesis: "Holder alignment, meme energy, and the distribution rail.",
@@ -134,14 +134,14 @@ const basket: BasketCoin[] = [
 const steps: AirdropStep[] = [
   {
     number: "01",
-    title: "RHI6900 holders accumulate",
+    title: "RMI6900 holders accumulate",
     body: "Wallet balances define the holder set for each index airdrop cycle.",
     tag: "SNAPSHOT",
   },
   {
     number: "02",
-    title: "The Robin Hood basket is routed",
-    body: "Treasury flow is split across coins we are in, RWA plays, reserves, and high-beta memes.",
+    title: "The meme index basket is routed",
+    body: "Treasury flow is split across coins we are in, RWA plays, reserves, and high-beta meme rails.",
     tag: "CUSTOM INDEX",
   },
   {
@@ -160,7 +160,7 @@ const steps: AirdropStep[] = [
 
 const lanes = [
   { label: "RWA sleeve", value: "29%", copy: "ONDO, LINK, CFG, PYTH" },
-  { label: "Core reserves", value: "31%", copy: "RHI6900, BTC, ETH, SOL" },
+  { label: "Core reserves", value: "31%", copy: "RMI6900, BTC, ETH, SOL" },
   { label: "Meme conveyor", value: "25%", copy: "WIF, BONK, PEPE, POPCAT" },
   { label: "Execution cash", value: "3%", copy: "USDC routing buffer" },
 ];
@@ -173,7 +173,7 @@ const dashboardStats = [
 ];
 
 const dashboardFeed = [
-  { asset: "RHI6900", route: "Core weight", amount: "22.0%", status: "Active" },
+  { asset: "RMI6900", route: "Core weight", amount: "22.0%", status: "Active" },
   { asset: "ONDO", route: "RWA route", amount: "8.0%", status: "Queued" },
   { asset: "WIF", route: "Meme belt", amount: "3.0%", status: "Live" },
   { asset: "BONK", route: "Meme belt", amount: "3.0%", status: "Live" },
@@ -227,8 +227,8 @@ const memeCoins = [
 
 const faqs = [
   {
-    q: "What is RHI6900?",
-    a: "RHI6900 is positioned as a holder-first Robin Hood index token: hold it, and the index mechanics can reward holders with airdropped exposure to the basket.",
+    q: "What is RMI6900?",
+    a: "RMI6900 is positioned as a holder-first Robinhood Meme Index token: hold it, and the index mechanics can reward holders with airdropped exposure to the basket.",
   },
   {
     q: "Is this basket final?",
@@ -240,7 +240,7 @@ const faqs = [
   },
   {
     q: "Why include RWA coins?",
-    a: "The Robin Hood theme works best when the basket is not only meme beta. RWA coins add a tokenized markets sleeve alongside Solana flow, reserves, and culture coins.",
+    a: "The Robinhood Meme Index works best when the basket is not only meme beta. RWA coins add a tokenized markets sleeve alongside Solana flow, reserves, and culture coins.",
   },
 ];
 
@@ -261,14 +261,14 @@ export default function Home() {
     <main>
       <header className="site-header">
         <div className="header-shell">
-          <a className="brand-pill" href="#top" aria-label="RHI6900 home">
+          <a className="brand-pill" href="#top" aria-label="RMI6900 home">
             <span className="brand-mark" aria-hidden="true">
               <span />
               <span />
               <span />
               <span />
             </span>
-            <span>RHI6900</span>
+            <span>RMI6900</span>
           </a>
 
           <nav className="topnav" aria-label="Primary navigation">
@@ -288,11 +288,13 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-body">
           <div className="hero-copy">
-            <div className="eyebrow">/ ROBIN HOOD INDEX /</div>
-            <h1>RHI6900</h1>
+            <div className="eyebrow">/ ROBINHOOD MEME INDEX 6900 /</div>
+            <h1>RMI6900</h1>
+            <div className="manifesto-line">Stop indexing. Believe in memes.</div>
             <p className="hero-lede">
-              A custom holder airdrop index for the coins we are in, real-world
-              asset plays, Solana flow, and high-conviction meme beta.
+              Robinhood Meme Index 6900 is the custom holder airdrop index for
+              coins we are in, real-world asset plays, Solana flow, and
+              high-conviction meme beta.
             </p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button button-dark" href="#airdrops">
@@ -309,12 +311,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-terminal" aria-label="RHI6900 index dashboard">
+          <div className="hero-terminal" aria-label="RMI6900 index dashboard">
             <div className="browser-bar">
               <span />
               <span />
               <span />
-              <strong>rhi6900.index</strong>
+              <strong>rmi6900.index</strong>
             </div>
             <div className="terminal-content">
               <div className="terminal-total">
@@ -407,7 +409,7 @@ export default function Home() {
           <div className="section-head">
             <div>
               <div className="eyebrow">/ DASHBOARD /</div>
-              <h2>Index-style dashboard for the RHI6900 machine.</h2>
+              <h2>Index-style dashboard for the RMI6900 machine.</h2>
             </div>
             <p>
               A holder-facing control room that makes the index feel live:
@@ -485,8 +487,8 @@ export default function Home() {
               <h2>Built for holders, not a walled garden.</h2>
             </div>
             <p>
-              The old Index site promised direct distributions. RHI6900 keeps
-              that same clear mechanic and reskins it around a Robin Hood crypto
+              The old Index site promised direct distributions. RMI6900 keeps
+              that same clear mechanic and reskins it around a Robinhood meme crypto
               basket.
             </p>
           </div>
@@ -511,7 +513,7 @@ export default function Home() {
               <h2>Coins we are in, plus RWA.</h2>
             </div>
             <p>
-              A launch draft that mixes Robin Hood culture, core crypto assets,
+              A launch draft that mixes Robinhood meme culture, core crypto assets,
               real-world asset rails, Solana flow, and meme-market upside.
             </p>
           </div>
@@ -556,7 +558,7 @@ export default function Home() {
             </div>
             <p>
               The meme sleeve is treated like a moving conveyor: high-beta
-              attention coins rotate through the RHI6900 index without hiding
+              attention coins rotate through the RMI6900 index without hiding
               the core RWA and reserve rails.
             </p>
           </div>
@@ -595,7 +597,7 @@ export default function Home() {
           <div className="section-head">
             <div>
               <div className="eyebrow">/ HOLDER AIRDROPS /</div>
-              <h2>Hold RHI6900. Receive the index.</h2>
+              <h2>Hold RMI6900. Receive the index.</h2>
             </div>
             <p>
               The public-facing flow should stay simple even while the contracts
@@ -623,7 +625,7 @@ export default function Home() {
           <div className="rebalance-panel">
             <div>
               <div className="eyebrow">/ REBALANCE LOGIC /</div>
-              <h2>Robin Hood index, not passive dust.</h2>
+              <h2>Robinhood Meme Index, not passive dust.</h2>
               <p>
                 The basket can be tuned around current conviction: more RWA when
                 tokenized markets are leading, more Solana beta when flow moves
@@ -666,14 +668,14 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="layout-rail">
-          <a className="brand-pill" href="#top" aria-label="RHI6900 home">
+          <a className="brand-pill" href="#top" aria-label="RMI6900 home">
             <span className="brand-mark" aria-hidden="true">
               <span />
               <span />
               <span />
               <span />
             </span>
-            <span>RHI6900</span>
+            <span>RMI6900</span>
           </a>
           <p>
             Draft allocations shown for site launch. Final airdrop mechanics

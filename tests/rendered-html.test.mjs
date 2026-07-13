@@ -11,7 +11,7 @@ async function render() {
 
   return worker.fetch(
     new Request("http://localhost/", {
-      headers: { accept: "text/html", host: "rhi6900.test" },
+      headers: { accept: "text/html", host: "rmi6900.test" },
     }),
     {
       ASSETS: {
@@ -25,15 +25,16 @@ async function render() {
   );
 }
 
-test("server-renders the RHI6900 index site", async () => {
+test("server-renders the RMI6900 index site", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>RHI6900 \| Robin Hood Index<\/title>/i);
-  assert.match(html, /RHI6900/);
-  assert.match(html, /Robin Hood Index/);
+  assert.match(html, /<title>RMI6900 \| Robinhood Meme Index 6900<\/title>/i);
+  assert.match(html, /RMI6900/);
+  assert.match(html, /Robinhood Meme Index 6900/);
+  assert.match(html, /Stop indexing\. Believe in memes\./);
   assert.match(html, /Holder airdrops/);
   assert.match(html, /Coins we are in, plus RWA/);
   assert.match(html, /Index-style dashboard/);

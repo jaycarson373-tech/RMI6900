@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Space+Mono:wght@400;700&display=swap");
 @import "tailwindcss";
 
 :root {
-  --font-sans: "Instrument Sans", var(--font-geist-sans), "Helvetica Neue",
-    Arial, sans-serif;
+  --font-sans: "Inter", var(--font-geist-sans), "Helvetica Neue", Arial,
+    sans-serif;
+  --font-display: "Orbitron", var(--font-geist-sans), sans-serif;
+  --font-data: "Space Mono", var(--font-geist-mono), monospace;
+  --font-stat: "Bebas Neue", "Barlow Condensed", sans-serif;
   --color-ink: #181815;
   --color-muted: #706f69;
   --color-soft: #99978d;
@@ -103,6 +107,7 @@ main {
   justify-content: center;
   min-height: 52px;
   border-radius: var(--radius-md);
+  font-family: var(--font-data);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.11em;
@@ -142,6 +147,7 @@ main {
   gap: clamp(18px, 3vw, 34px);
   min-width: 0;
   color: var(--color-muted);
+  font-family: var(--font-data);
   font-size: 12px;
   font-weight: 700;
 }
@@ -184,6 +190,7 @@ main {
 
 .eyebrow {
   color: #788500;
+  font-family: var(--font-data);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -194,11 +201,29 @@ main {
 .hero h1 {
   margin: 18px 0 0;
   color: var(--color-ink);
+  font-family: var(--font-display);
   font-size: clamp(64px, 9vw, 126px);
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0;
   line-height: 0.92;
   text-shadow: 0 0 34px rgba(232, 255, 23, 0.42);
+}
+
+.manifesto-line {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 18px;
+  border: 2px solid var(--color-ink);
+  padding: 0 14px;
+  background: var(--color-neon);
+  color: var(--color-ink);
+  box-shadow: 5px 5px 0 var(--color-ink);
+  font-family: var(--font-data);
+  font-size: clamp(12px, 1.3vw, 15px);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero-lede {
@@ -297,6 +322,7 @@ main {
 .browser-bar strong {
   margin-left: 6px;
   color: #596200;
+  font-family: var(--font-data);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -328,7 +354,8 @@ main {
 .terminal-total strong {
   display: block;
   margin-top: 10px;
-  font-size: clamp(42px, 5vw, 58px);
+  font-family: var(--font-stat);
+  font-size: clamp(54px, 6vw, 76px);
   font-weight: 800;
   letter-spacing: 0;
   line-height: 0.95;
@@ -363,6 +390,7 @@ main {
 .terminal-metrics strong {
   display: block;
   margin-top: 8px;
+  font-family: var(--font-display);
   font-size: 24px;
   font-weight: 800;
 }
@@ -425,6 +453,7 @@ main {
 }
 
 .panel-head b {
+  font-family: var(--font-data);
   font-size: 12px;
   font-weight: 800;
 }
@@ -556,6 +585,7 @@ main {
 .section h2 {
   max-width: 780px;
   margin: 14px 0 0;
+  font-family: var(--font-display);
   font-size: clamp(34px, 4vw, 58px);
   font-weight: 600;
   letter-spacing: 0;
@@ -695,7 +725,8 @@ main {
   display: block;
   margin-top: 24px;
   color: var(--color-ink);
-  font-size: clamp(30px, 3.5vw, 48px);
+  font-family: var(--font-stat);
+  font-size: clamp(42px, 5vw, 66px);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 0.95;
@@ -804,6 +835,7 @@ main {
 
 .feed-item b {
   display: block;
+  font-family: var(--font-display);
   font-size: 14px;
   font-weight: 900;
 }

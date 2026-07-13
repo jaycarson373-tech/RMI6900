@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "RHI6900 | Robin Hood Index";
+const siteTitle = "RMI6900 | Robinhood Meme Index 6900";
 const siteDescription =
-  "A neon Robin Hood-style holder airdrop index for RHI6900, conviction coins, RWA assets, and meme-belt crypto exposure.";
+  "A neon Robinhood Meme Index-style holder airdrop index for RMI6900, conviction coins, RWA assets, and meme-belt crypto exposure.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -37,13 +37,13 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: siteTitle,
       description:
-        "Hold RHI6900 and follow a neon custom Robin Hood index with a dashboard, RWA sleeve, and meme conveyor.",
+        "Hold RMI6900 and follow a neon custom Robinhood Meme Index with a dashboard, RWA sleeve, and meme conveyor.",
       images: [
         {
           url: "/og.png",
           width: 1200,
           height: 630,
-          alt: "RHI6900 Robin Hood Index social preview",
+          alt: "RMI6900 Robinhood Meme Index 6900 social preview",
         },
       ],
     },

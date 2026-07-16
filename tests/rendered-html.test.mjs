@@ -43,6 +43,8 @@ test("server-renders the RMI6900 index site", async () => {
   assert.match(html, /Coins we are in, plus RWA/);
   assert.match(html, /Index-style dashboard/);
   assert.match(html, /Meme coins ride the belt/);
+  assert.match(html, /rhx6900-logo\.jpg/);
+  assert.match(html, /RHX signal \/ RMI index/);
   assert.match(html, /PEPE/);
   assert.match(html, /SPX6900/);
   assert.match(html, /ONDO/);
@@ -67,5 +69,7 @@ test("removes disposable starter dependencies and imports", async () => {
   assert.match(css, /conveyor-track/);
   assert.match(css, /engine-grid/);
   assert.match(css, /terminal-panel/);
-  assert.match(css, /#e8ff17/);
+  assert.match(css, /#efff00/);
+  assert.match(css, /hero-logo-lockup/);
+  assert.match(css, /terminal-logo-strip/);
 });

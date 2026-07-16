@@ -279,16 +279,15 @@ const statStyle = (accent: string): CSSProperties =>
   }) as CSSProperties;
 
 export default function Home() {
+  const logoAlt = "RHX6900 neon coin logo";
+
   return (
     <main>
       <header className="site-header">
         <div className="header-shell">
           <a className="brand-pill" href="#top" aria-label="RMI6900 home">
             <span className="brand-mark" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-              <span />
+              <img src="/favicon.png" alt="" />
             </span>
             <span>RMI6900</span>
           </a>
@@ -310,6 +309,9 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-body">
           <div className="hero-copy">
+            <div className="hero-logo-lockup">
+              <img src="/rhx6900-logo.jpg" alt={logoAlt} />
+            </div>
             <div className="eyebrow">/ ROBINHOOD MEME INDEX 6900 /</div>
             <h1>RMI6900</h1>
             <div className="manifesto-line">Stop indexing. Believe in memes.</div>
@@ -333,18 +335,31 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-terminal" aria-label="RMI6900 index dashboard">
-            <div className="browser-bar">
-              <span />
-              <span />
-              <span />
-              <strong>rmi6900.index</strong>
+          <div className="hero-visual">
+            <div className="coin-halo" aria-hidden="true">
+              <img src="/icon-512.png" alt="" />
             </div>
-            <div className="terminal-content">
+
+            <div className="hero-terminal" aria-label="RMI6900 index dashboard">
+              <div className="browser-bar">
+                <span />
+                <span />
+                <span />
+                <strong>rhx6900.rmi</strong>
+              </div>
+              <div className="terminal-content">
+                <div className="terminal-logo-strip">
+                  <img src="/rhx6900-logo.jpg" alt={logoAlt} />
+                  <div>
+                    <span>Ticker rail</span>
+                    <strong>RHX signal / RMI index</strong>
+                  </div>
+                </div>
+
               <div className="terminal-total">
                 <span>Projected index pool</span>
-                <strong>RMI/AI</strong>
-                <em>black-screen index engine</em>
+                <strong>RHX/RMI</strong>
+                <em>black-screen neon coin engine</em>
               </div>
 
               <div className="terminal-metrics">
@@ -422,6 +437,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -761,10 +777,7 @@ export default function Home() {
         <div className="layout-rail">
           <a className="brand-pill" href="#top" aria-label="RMI6900 home">
             <span className="brand-mark" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-              <span />
+              <img src="/favicon.png" alt="" />
             </span>
             <span>RMI6900</span>
           </a>

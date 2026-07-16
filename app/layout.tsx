@@ -37,13 +37,13 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: siteTitle,
       description:
-        "Hold RMI6900 and follow a neon AI-index dashboard with meme rails, RWA rails, live receipts, and a conveyor belt.",
+        "Hold RMI6900 and follow the RHX6900 neon coin dashboard with meme rails, RWA rails, live receipts, and a conveyor belt.",
       images: [
         {
-          url: "/og.png",
-          width: 1200,
-          height: 630,
-          alt: "RMI6900 Robinhood Meme Index 6900 social preview",
+          url: "/rhx6900-logo.jpg",
+          width: 1254,
+          height: 1254,
+          alt: "RHX6900 neon coin logo for RMI6900",
         },
       ],
     },
@@ -51,18 +51,22 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: siteTitle,
       description:
-        "A holder airdrop index with AI6900-style rails, RWA exposure, and a meme conveyor belt.",
-      images: ["/og.png"],
+        "A holder airdrop index with RHX6900 neon coin energy, RWA exposure, and a meme conveyor belt.",
+      images: ["/rhx6900-logo.jpg"],
     },
     icons: {
-      icon: "/favicon.svg",
-      shortcut: "/favicon.svg",
+      icon: [
+        { url: "/favicon.png", sizes: "64x64", type: "image/png" },
+        { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      ],
+      shortcut: "/favicon.png",
+      apple: "/apple-touch-icon.png",
     },
   };
 }
 
 export const viewport: Viewport = {
-  themeColor: "#e8ff17",
+  themeColor: "#efff00",
 };
 
 export default function RootLayout({
